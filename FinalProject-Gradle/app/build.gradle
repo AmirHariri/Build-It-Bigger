@@ -10,6 +10,7 @@ android {
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -28,24 +29,19 @@ android {
         }
     }
 }
-
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-
-    // Required for instrumented tests
-
-
     compile project(':javajokelib')
     compile project(':androidjokelibrary')
     compile project(path: ':endpoint-backend', configuration: 'android-endpoints')
     compile 'com.google.api-client:google-api-client:1.22.0'
     compile 'com.google.api-client:google-api-client-android:1.22.0'
     compile 'com.android.support:appcompat-v7:26.+'
-    compile 'com.google.android.gms:play-services-ads:11.0.4'
     compile 'com.google.code.findbugs:jsr305:2.0.1'
     compile 'com.android.support:support-v4:26.+'
     testCompile 'junit:junit:4.12'
+    freeCompile 'com.google.android.gms:play-services-ads:11.0.4'
 }

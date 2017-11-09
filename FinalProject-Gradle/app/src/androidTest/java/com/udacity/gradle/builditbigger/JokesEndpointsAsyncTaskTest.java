@@ -34,24 +34,4 @@ public class JokesEndpointsAsyncTaskTest extends AndroidTestCase {
 
         assertTrue("Result: " + mResult, mResult.length() > 0);
     }
-
-
-
-
-/*
-    public void test() {
-        String result = null;
-
-        JokesEndpointsAsyncTask jokesEndpointsAsyncTask = new JokesEndpointsAsyncTask();
-        joke//assertTrue("Happyness", true);sEndpointsAsyncTask.execute();
-        try {
-            result = jokesEndpointsAsyncTask.get();
-        }catch (Exception e) {
-            e.printStackTrace();
-        }
-        assertNotNull(result);
-    }*/
-
-
-
 }
